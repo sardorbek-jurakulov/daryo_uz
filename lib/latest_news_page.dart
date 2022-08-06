@@ -53,8 +53,23 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       646,
     ),
   ];
+
+  Widget createNews() {
+    return Column(
+      children: [
+        Row(
+          children: [],
+        ),
+        Row(
+          children: [],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    int lengthOfNews = news.length;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -76,7 +91,16 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                 )
               ],
             ),
-            ListView(),
+            ListView.builder(
+                itemCount: lengthOfNews,
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    children: [
+                      createNews(),
+                      Divider(),
+                    ],
+                  );
+                }),
           ],
         ),
         drawer: Drawer(
