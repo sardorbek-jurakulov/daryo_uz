@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # daryo_uz_clone
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# daryo_uz
+Daryo uz
+>>>>>>> c4f0374de0294cb6453992742a4a81366faabad2
