@@ -12,14 +12,43 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+            // leading: IconButton(
+            //     onPressed: () => Scaffold.of(context).openDrawer(),
+            //     icon: Icon(Icons.add)),
+            ),
         body: Column(
           children: [
             ListView(),
             ListView(),
           ],
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(),
+                child: Column(
+                  children: [
+                    Text("Daryo"),
+                    Row(
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text("Lotincha"),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text("Kirilcha"),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
