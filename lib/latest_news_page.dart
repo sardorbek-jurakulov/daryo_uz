@@ -74,24 +74,34 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       child: Scaffold(
         appBar: AppBar(
             // leading: IconButton(
-            //     onPressed: () => Scaffold.of(context).openDrawer(),
-            //     icon: Icon(Icons.add)),
+            //   onPressed: () => Scaffold.of(context).openDrawer(),
+            //   icon: Icon(Icons.add),
+            // ),
             ),
         body: Column(
           children: [
-            ListView(
-              children: [
-                Row(
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("So'ngi yangiliklar"),
-                    )
-                  ],
-                )
-              ],
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    children: [
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        child: Text("So'ngi yangiliklar"),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
-            ListView.builder(
+            Expanded(
+              child: ListView.builder(
                 itemCount: lengthOfNews,
                 itemBuilder: (BuildContext context, int index) {
                   return Column(
@@ -100,9 +110,16 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       Divider(),
                     ],
                   );
-                }),
+                },
+              ),
+            ),
           ],
         ),
+        // body: Column(
+        //   children: [
+        //     Text("safasdfa asdfasfd asdfasds"),
+        //   ],
+        // ),
         drawer: Drawer(
           child: ListView(
             children: [
