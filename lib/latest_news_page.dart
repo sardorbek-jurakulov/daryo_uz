@@ -30,16 +30,20 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                 decoration: BoxDecoration(),
                 child: Column(
                   children: [
-                    Text("Daryo"),
                     Row(
                       children: [
-                        TextButton(
-                          onPressed: () {},
-                          child: Text("Lotincha"),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text("Kirilcha"),
+                        Text("Daryo"),
+                        Row(
+                          children: [
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Lotincha"),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text("Kirilcha"),
+                            ),
+                          ],
                         ),
                       ],
                     ),
