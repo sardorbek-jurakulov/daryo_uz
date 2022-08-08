@@ -76,6 +76,8 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
 
   String selectedTitle = "";
 
+  bool isLatinChecked = true;
+
   @override
   Widget build(BuildContext context) {
     int lengthOfNews = news.length;
@@ -185,18 +187,42 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
             children: [
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Color(0xFF1180b6),
+                  color: Color(0xff1180b6),
                 ),
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        Text("Daryo"),
+                        Text(
+                          "Daryo",
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                          ),
+                        ),
                         Row(
                           children: [
                             TextButton(
-                              onPressed: () {},
-                              child: Text("Lotincha"),
+                              style: ButtonStyle(
+                                backgroundColor: isLatinChecked
+                                    ? MaterialStateProperty.all<Color>(
+                                        Colors.white)
+                                    : MaterialStateProperty.all<Color>(
+                                        Color(0xff1180b6)),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  isLatinChecked = !isLatinChecked;
+                                });
+                              },
+                              child: Text(
+                                "Lotincha",
+                                style: TextStyle(
+                                  color: isLatinChecked
+                                      ? Color(0xff1180b6)
+                                      : Colors.white,
+                                ),
+                              ),
                             ),
                             TextButton(
                               onPressed: () {},
@@ -217,6 +243,8 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         ),
                       ],
                     ),
+                    Divider(),
+                    Row(),
                   ],
                 ),
               ),
