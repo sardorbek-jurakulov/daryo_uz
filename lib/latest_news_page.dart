@@ -319,6 +319,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                                   color: Colors.white,
                                   width: 1,
                                 ),
+                                padding: EdgeInsets.only(left: 5, right: 5),
                               ),
                               onPressed: () {
                                 setState(() {
