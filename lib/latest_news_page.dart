@@ -180,11 +180,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
             ),
           ],
         ),
-        // body: Column(
-        //   children: [
-        //     Text("safasdfa asdfasfd asdfasds"),
-        //   ],
-        // ),
         drawer: Drawer(
           child: ListView(
             children: [
