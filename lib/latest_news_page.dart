@@ -186,6 +186,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           child: ListView(
             children: [
               DrawerHeader(
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                 decoration: const BoxDecoration(
                   color: Color(0xff1180b6),
                 ),
@@ -193,12 +194,14 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           "Daryo",
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 28,
                             color: Colors.white,
+                            // fontWeight: FontWeight.w500,
                           ),
                         ),
                         // Container(
