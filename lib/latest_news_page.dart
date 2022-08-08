@@ -553,6 +553,14 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     // dense: true,
                   ),
+                  Opacity(
+                    opacity: 0.2,
+                    child: Divider(
+                      height: 0,
+                      thickness: 1,
+                      color: Color(0xff000000),
+                    ),
+                  ),
                   ListTile(
                     title: Text(
                       "Tanlangan xabarlar",
@@ -569,6 +577,14 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     // contentPadding: EdgeInsets.zero,
                     // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     // dense: true,
+                  ),
+                  Opacity(
+                    opacity: 0.2,
+                    child: Divider(
+                      height: 0,
+                      thickness: 1,
+                      color: Color(0xff000000),
+                    ),
                   ),
                   ListTile(
                     title: Text(
