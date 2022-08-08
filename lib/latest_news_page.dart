@@ -83,25 +83,64 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  // Changing Drawer Icon Size
+          automaticallyImplyLeading: false,
+          // leading: Builder(
+          //   builder: (BuildContext context) {
+          //     return IconButton(
+          //       icon: const Icon(
+          //         Icons.menu,
+          //         // Changing Drawer Icon Size
+          //       ),
+          //       onPressed: () {
+          //         Scaffold.of(context).openDrawer();
+          //       },
+          //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          //     );
+          //   },
+          // ),
+          // title: Text(
+          //   selectedTitle,
+          // ),
+          actions: <Widget>[
+            Flexible(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 10,
+                  right: 25,
                 ),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
-          title: Text(
-            selectedTitle,
-          ),
-          actions: const <Widget>[
-            Icon(CupertinoIcons.search),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: const Icon(
+                            Icons.menu,
+                            // Changing Drawer Icon Size
+                          ),
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: MaterialLocalizations.of(context)
+                              .openAppDrawerTooltip,
+                        );
+                      },
+                    ),
+                    Text(
+                      selectedTitle,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(CupertinoIcons.search),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
         body: Column(
