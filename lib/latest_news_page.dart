@@ -186,49 +186,104 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           child: ListView(
             children: [
               DrawerHeader(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xff1180b6),
                 ),
                 child: Column(
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Daryo",
                           style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
                           ),
                         ),
-                        Row(
-                          children: [
-                            TextButton(
-                              style: ButtonStyle(
-                                backgroundColor: isLatinChecked
-                                    ? MaterialStateProperty.all<Color>(
-                                        Colors.white)
-                                    : MaterialStateProperty.all<Color>(
-                                        Color(0xff1180b6)),
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  isLatinChecked = !isLatinChecked;
-                                });
-                              },
-                              child: Text(
-                                "Lotincha",
-                                style: TextStyle(
-                                  color: isLatinChecked
-                                      ? Color(0xff1180b6)
-                                      : Colors.white,
+                        Container(
+                          height: 35,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.white,
+                            ),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10.0),
+                            ),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                            child: Row(
+                              children: [
+                                TextButton(
+                                  // style: ButtonStyle(
+                                  //   backgroundColor: isLatinChecked
+                                  //       ? MaterialStateProperty.all<Color>(
+                                  //           Colors.white)
+                                  //       : MaterialStateProperty.all<Color>(
+                                  //           Color(0xff1180b6)),
+                                  // ),
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: isLatinChecked
+                                        ? Colors.white
+                                        : Color(0xff1180b6),
+                                    // fixedSize: Size.fromHeight(47),
+                                    shape: const BeveledRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(0),
+                                      ),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isLatinChecked = !isLatinChecked;
+                                    });
+                                  },
+                                  child: Text(
+                                    "Lotincha",
+                                    style: TextStyle(
+                                      color: isLatinChecked
+                                          ? Color(0xff1180b6)
+                                          : Colors.white,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                TextButton(
+                                  // style: ButtonStyle(
+                                  //   backgroundColor: !isLatinChecked
+                                  //       ? MaterialStateProperty.all<Color>(
+                                  //           Colors.white)
+                                  //       : MaterialStateProperty.all<Color>(
+                                  //           Color(0xff1180b6)),
+                                  // ),
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: !isLatinChecked
+                                        ? Colors.white
+                                        : Color(0xff1180b6),
+                                    // fixedSize: Size.fromHeight(47),
+                                    shape: const BeveledRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(0),
+                                      ),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isLatinChecked = !isLatinChecked;
+                                    });
+                                  },
+                                  child: Text(
+                                    "Кириллча",
+                                    style: TextStyle(
+                                      color: !isLatinChecked
+                                          ? Color(0xff1180b6)
+                                          : Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            TextButton(
-                              onPressed: () {},
-                              child: Text("Kirilcha"),
-                            ),
-                          ],
+                          ),
                         ),
                       ],
                     ),
