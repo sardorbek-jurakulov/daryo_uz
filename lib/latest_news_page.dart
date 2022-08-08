@@ -73,11 +73,21 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-            // leading: IconButton(
-            //   onPressed: () => Scaffold.of(context).openDrawer(),
-            //   icon: Icon(Icons.add),
-            // ),
-            ),
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(
+                  Icons.menu,
+                  // Changing Drawer Icon Size
+                ),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+              );
+            },
+          ),
+        ),
         body: Column(
           children: [
             Expanded(
