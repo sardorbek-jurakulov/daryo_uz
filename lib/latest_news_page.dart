@@ -199,7 +199,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         const Text(
                           "Daryo",
                           style: TextStyle(
-                            fontSize: 28,
+                            fontSize: 30,
                             color: Colors.white,
                             // fontWeight: FontWeight.w500,
                           ),
@@ -345,17 +345,32 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         const Text(
                           "Toshkent",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w300,
                             color: Color(0xffffffff),
                           ),
                         ),
                         Row(
                           children: [
-                            Icon(
-                              Icons.sunny,
+                            Container(
+                              margin: EdgeInsets.only(
+                                right: 10,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.sun_max,
+                                size: 34,
+                                color: Color(0xffffffff),
+                              ),
                             ),
-                            Text("37"),
+                            Text(
+                              "37\u00b0C",
+                              style: TextStyle(
+                                color: Color(0xffffffff),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                letterSpacing: 0.5,
+                              ),
+                            ),
                           ],
                         ),
                       ],
