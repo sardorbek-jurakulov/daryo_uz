@@ -329,8 +329,8 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                                 "Кириллча",
                                 style: TextStyle(
                                   color: !isLatinChecked
-                                      ? Color(0xff1180b6)
-                                      : Colors.white,
+                                      ? const Color(0xff1180b6)
+                                      : const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -340,7 +340,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     Row(
                       children: [
-                        Text("Toshkent"),
+                        const Text("Toshkent"),
                         Row(
                           children: [
                             Icon(Icons.sunny),
