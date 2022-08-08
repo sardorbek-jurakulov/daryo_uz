@@ -185,199 +185,212 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
         drawer: Drawer(
           child: ListView(
             children: [
-              DrawerHeader(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
-                decoration: const BoxDecoration(
-                  color: Color(0xff1180b6),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Daryo",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.white,
-                            // fontWeight: FontWeight.w500,
+              SizedBox(
+                height: 500,
+                child: DrawerHeader(
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+                  decoration: const BoxDecoration(
+                    color: Color(0xff1180b6),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Daryo",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.white,
+                              // fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                        // Container(
-                        //   height: 35,
-                        //   decoration: BoxDecoration(
-                        //     border: Border.all(
-                        //       color: Colors.white,
-                        //     ),
-                        //     borderRadius: const BorderRadius.all(
-                        //       Radius.circular(10.0),
-                        //     ),
-                        //   ),
-                        //   child: ClipRRect(
-                        //     borderRadius: BorderRadius.circular(10.0),
-                        //     child: Row(
-                        //       children: [
-                        //         TextButton(
-                        //           style: TextButton.styleFrom(
-                        //             backgroundColor: isLatinChecked
-                        //                 ? Colors.white
-                        //                 : Color(0xff1180b6),
-                        //             shape: const BeveledRectangleBorder(
-                        //               borderRadius: BorderRadius.all(
-                        //                 Radius.circular(0),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //           onPressed: () {
-                        //             setState(() {
-                        //               isLatinChecked = !isLatinChecked;
-                        //             });
-                        //           },
-                        //           child: Text(
-                        //             "Lotincha",
-                        //             style: TextStyle(
-                        //               color: isLatinChecked
-                        //                   ? Color(0xff1180b6)
-                        //                   : Colors.white,
-                        //             ),
-                        //           ),
-                        //         ),
-                        //         TextButton(
-                        //           style: TextButton.styleFrom(
-                        //             backgroundColor: !isLatinChecked
-                        //                 ? Colors.white
-                        //                 : Color(0xff1180b6),
-                        //             shape: const BeveledRectangleBorder(
-                        //               borderRadius: BorderRadius.all(
-                        //                 Radius.circular(0),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //           onPressed: () {
-                        //             setState(() {
-                        //               isLatinChecked = !isLatinChecked;
-                        //             });
-                        //           },
-                        //           child: Text(
-                        //             "Кириллча",
-                        //             style: TextStyle(
-                        //               color: !isLatinChecked
-                        //                   ? Color(0xff1180b6)
-                        //                   : Colors.white,
-                        //             ),
-                        //           ),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // ),
-                        Row(
-                          children: [
-                            TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor: isLatinChecked
-                                    ? const Color(0xffffffff)
-                                    : const Color(0xff1180b6),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(11),
-                                    bottomLeft: Radius.circular(11),
+                          // Container(
+                          //   height: 35,
+                          //   decoration: BoxDecoration(
+                          //     border: Border.all(
+                          //       color: Colors.white,
+                          //     ),
+                          //     borderRadius: const BorderRadius.all(
+                          //       Radius.circular(10.0),
+                          //     ),
+                          //   ),
+                          //   child: ClipRRect(
+                          //     borderRadius: BorderRadius.circular(10.0),
+                          //     child: Row(
+                          //       children: [
+                          //         TextButton(
+                          //           style: TextButton.styleFrom(
+                          //             backgroundColor: isLatinChecked
+                          //                 ? Colors.white
+                          //                 : Color(0xff1180b6),
+                          //             shape: const BeveledRectangleBorder(
+                          //               borderRadius: BorderRadius.all(
+                          //                 Radius.circular(0),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //           onPressed: () {
+                          //             setState(() {
+                          //               isLatinChecked = !isLatinChecked;
+                          //             });
+                          //           },
+                          //           child: Text(
+                          //             "Lotincha",
+                          //             style: TextStyle(
+                          //               color: isLatinChecked
+                          //                   ? Color(0xff1180b6)
+                          //                   : Colors.white,
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         TextButton(
+                          //           style: TextButton.styleFrom(
+                          //             backgroundColor: !isLatinChecked
+                          //                 ? Colors.white
+                          //                 : Color(0xff1180b6),
+                          //             shape: const BeveledRectangleBorder(
+                          //               borderRadius: BorderRadius.all(
+                          //                 Radius.circular(0),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //           onPressed: () {
+                          //             setState(() {
+                          //               isLatinChecked = !isLatinChecked;
+                          //             });
+                          //           },
+                          //           child: Text(
+                          //             "Кириллча",
+                          //             style: TextStyle(
+                          //               color: !isLatinChecked
+                          //                   ? Color(0xff1180b6)
+                          //                   : Colors.white,
+                          //             ),
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Row(
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: isLatinChecked
+                                      ? const Color(0xffffffff)
+                                      : const Color(0xff1180b6),
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(11),
+                                      bottomLeft: Radius.circular(11),
+                                    ),
+                                  ),
+                                  side: const BorderSide(
+                                    color: Colors.white,
+                                    width: 1,
                                   ),
                                 ),
-                                side: const BorderSide(
-                                  color: Colors.white,
-                                  width: 1,
-                                ),
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  isLatinChecked = !isLatinChecked;
-                                });
-                              },
-                              child: Text(
-                                "Lotincha",
-                                style: TextStyle(
-                                  color: isLatinChecked
-                                      ? const Color(0xff1180b6)
-                                      : const Color(0xffffffff),
-                                ),
-                              ),
-                            ),
-                            TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor: !isLatinChecked
-                                    ? const Color(0xffffffff)
-                                    : const Color(0xff1180b6),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(11),
-                                    bottomRight: Radius.circular(11),
+                                onPressed: () {
+                                  setState(() {
+                                    isLatinChecked = !isLatinChecked;
+                                  });
+                                },
+                                child: Text(
+                                  "Lotincha",
+                                  style: TextStyle(
+                                    color: isLatinChecked
+                                        ? const Color(0xff1180b6)
+                                        : const Color(0xffffffff),
                                   ),
                                 ),
-                                side: const BorderSide(
-                                  color: Colors.white,
-                                  width: 1,
-                                ),
-                                padding: EdgeInsets.only(left: 5, right: 5),
                               ),
-                              onPressed: () {
-                                setState(() {
-                                  isLatinChecked = !isLatinChecked;
-                                });
-                              },
-                              child: Text(
-                                "Кириллча",
-                                style: TextStyle(
-                                  color: !isLatinChecked
-                                      ? const Color(0xff1180b6)
-                                      : const Color(0xffffffff),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: !isLatinChecked
+                                      ? const Color(0xffffffff)
+                                      : const Color(0xff1180b6),
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(11),
+                                      bottomRight: Radius.circular(11),
+                                    ),
+                                  ),
+                                  side: const BorderSide(
+                                    color: Colors.white,
+                                    width: 1,
+                                  ),
+                                  padding: EdgeInsets.only(left: 5, right: 5),
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    isLatinChecked = !isLatinChecked;
+                                  });
+                                },
+                                child: Text(
+                                  "Кириллча",
+                                  style: TextStyle(
+                                    color: !isLatinChecked
+                                        ? const Color(0xff1180b6)
+                                        : const Color(0xffffffff),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          "Toshkent",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300,
-                            color: Color(0xffffffff),
+                            ],
                           ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                right: 10,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.sun_max,
-                                size: 34,
-                                color: Color(0xffffffff),
-                              ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            "Toshkent",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w300,
+                              color: Color(0xffffffff),
                             ),
-                            Text(
-                              "37\u00b0C",
-                              style: TextStyle(
-                                color: Color(0xffffffff),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                letterSpacing: 0.5,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  right: 10,
+                                ),
+                                child: const Icon(
+                                  CupertinoIcons.sun_max,
+                                  size: 34,
+                                  color: Color(0xffffffff),
+                                ),
                               ),
-                            ),
-                          ],
+                              const Text(
+                                "37\u00b0C",
+                                style: TextStyle(
+                                  color: Color(0xffffffff),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w300,
+                                  letterSpacing: 0.5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const Opacity(
+                        opacity: 0.7,
+                        child: Divider(
+                          height: 30,
+                          thickness: 1,
+                          color: Color(0xffffffff),
                         ),
-                      ],
-                    ),
-                    Divider(),
-                    Row(),
-                  ],
+                      ),
+                      Row(),
+                    ],
+                  ),
                 ),
               ),
               Container(
