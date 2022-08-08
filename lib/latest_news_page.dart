@@ -394,13 +394,18 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
-                            children: const [
-                              Icon(
-                                CupertinoIcons.money_dollar_circle,
-                                color: Color(0xffffffff),
-                                size: 25,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  right: 3,
+                                ),
+                                child: const Icon(
+                                  CupertinoIcons.money_dollar_circle,
+                                  color: Color(0xffffffff),
+                                  size: 25,
+                                ),
                               ),
-                              Text(
+                              const Text(
                                 "10919.89",
                                 style: TextStyle(
                                   fontSize: 15,
@@ -410,13 +415,18 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                             ],
                           ),
                           Row(
-                            children: const [
-                              Icon(
-                                CupertinoIcons.money_dollar_circle,
-                                color: Color(0xffffffff),
-                                size: 25,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  right: 3,
+                                ),
+                                child: const Icon(
+                                  CupertinoIcons.money_dollar_circle,
+                                  color: Color(0xffffffff),
+                                  size: 25,
+                                ),
                               ),
-                              Text(
+                              const Text(
                                 "11125.18",
                                 style: TextStyle(
                                   fontSize: 15,
@@ -426,13 +436,18 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                             ],
                           ),
                           Row(
-                            children: const [
-                              Icon(
-                                CupertinoIcons.money_rubl_circle,
-                                color: Color(0xffffffff),
-                                size: 25,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  right: 3,
+                                ),
+                                child: const Icon(
+                                  CupertinoIcons.money_rubl_circle,
+                                  color: Color(0xffffffff),
+                                  size: 25,
+                                ),
                               ),
-                              Text(
+                              const Text(
                                 "181.47",
                                 style: TextStyle(
                                   fontSize: 15,
@@ -461,12 +476,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xfffffbc9),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -478,12 +487,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -495,12 +498,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -512,12 +509,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -529,12 +520,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -546,12 +531,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   Opacity(
                     opacity: 0.2,
@@ -571,12 +550,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   Opacity(
                     opacity: 0.2,
@@ -596,12 +569,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -613,12 +580,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -630,12 +591,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -647,12 +602,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -664,12 +613,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffffffff),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -681,12 +624,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -698,12 +635,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -715,12 +646,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -732,12 +657,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -749,12 +668,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                   ListTile(
                     title: Text(
@@ -766,12 +679,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ),
                     ),
                     tileColor: Color(0xffececec),
-                    // horizontalTitleGap: 0,
-                    // minLeadingWidth: 0,
-                    // minVerticalPadding: 0,
-                    // contentPadding: EdgeInsets.zero,
-                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    // dense: true,
                   ),
                 ],
               ),
