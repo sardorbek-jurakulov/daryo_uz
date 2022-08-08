@@ -216,18 +216,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                             child: Row(
                               children: [
                                 TextButton(
-                                  // style: ButtonStyle(
-                                  //   backgroundColor: isLatinChecked
-                                  //       ? MaterialStateProperty.all<Color>(
-                                  //           Colors.white)
-                                  //       : MaterialStateProperty.all<Color>(
-                                  //           Color(0xff1180b6)),
-                                  // ),
                                   style: TextButton.styleFrom(
                                     backgroundColor: isLatinChecked
                                         ? Colors.white
                                         : Color(0xff1180b6),
-                                    // fixedSize: Size.fromHeight(47),
                                     shape: const BeveledRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(0),
@@ -249,18 +241,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                                   ),
                                 ),
                                 TextButton(
-                                  // style: ButtonStyle(
-                                  //   backgroundColor: !isLatinChecked
-                                  //       ? MaterialStateProperty.all<Color>(
-                                  //           Colors.white)
-                                  //       : MaterialStateProperty.all<Color>(
-                                  //           Color(0xff1180b6)),
-                                  // ),
                                   style: TextButton.styleFrom(
                                     backgroundColor: !isLatinChecked
                                         ? Colors.white
                                         : Color(0xff1180b6),
-                                    // fixedSize: Size.fromHeight(47),
                                     shape: const BeveledRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(0),
