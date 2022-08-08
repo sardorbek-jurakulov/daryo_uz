@@ -340,11 +340,21 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text("Toshkent"),
+                        const Text(
+                          "Toshkent",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
                         Row(
                           children: [
-                            Icon(Icons.sunny),
+                            Icon(
+                              Icons.sunny,
+                            ),
                             Text("37"),
                           ],
                         ),
