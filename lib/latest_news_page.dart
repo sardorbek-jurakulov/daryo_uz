@@ -186,7 +186,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           child: ListView(
             children: [
               SizedBox(
-                height: 500,
+                height: 195,
                 child: DrawerHeader(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                   decoration: const BoxDecoration(
