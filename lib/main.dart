@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:daryo_uz_clone/palette.dart";
 import 'package:daryo_uz_clone/latest_news_page.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
+        primarySwatch: Palette.bToDark,
       ),
       home: LatestNewsPage(),
     );
