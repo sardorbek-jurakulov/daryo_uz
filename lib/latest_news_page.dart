@@ -446,19 +446,67 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                 ),
               ),
               Container(
-                  child: Column(
-                children: [
-                  ListTile(
-                    title: Text("Qo'llanma ekranni ko'rsatish"),
-                  ),
-                  ListTile(
-                    title: Text("So'ngi yangiliklar"),
-                  ),
-                  ListTile(
-                    title: Text("Mahalliy"),
-                  ),
-                ],
-              )),
+                padding: EdgeInsets.zero,
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text("Qo'llanma ekranni ko'rsatish"),
+                      tileColor: Color(0xfffffbc9),
+                    ),
+                    ListTile(
+                      title: Text("So'ngi yangiliklar"),
+                    ),
+                    ListTile(
+                      title: Text("Mahalliy"),
+                    ),
+                    ListTile(
+                      title: Text("Dunyo"),
+                    ),
+                    ListTile(
+                      title: Text("Texnologiyalar"),
+                    ),
+                    ListTile(
+                      title: Text("Madaniyat"),
+                    ),
+                    ListTile(
+                      title: Text("Tanlangan xabarlar"),
+                    ),
+                    ListTile(
+                      title: Text("Avto"),
+                    ),
+                    ListTile(
+                      title: Text("Sport"),
+                    ),
+                    ListTile(
+                      title: Text("Foto"),
+                    ),
+                    ListTile(
+                      title: Text("Lifestyle"),
+                    ),
+                    ListTile(
+                      title: Text("Kolumnistlar"),
+                    ),
+                    ListTile(
+                      title: Text("Afisha"),
+                    ),
+                    ListTile(
+                      title: Text("Valyutalar kursi"),
+                    ),
+                    ListTile(
+                      title: Text("Ob-havo"),
+                    ),
+                    ListTile(
+                      title: Text("Foydalanish shartlari"),
+                    ),
+                    ListTile(
+                      title: Text("\"Daryo\" haqida"),
+                    ),
+                    ListTile(
+                      title: Text("Sozlamalar"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
