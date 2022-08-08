@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter/cupertino.dart";
 import "package:daryo_uz_clone/models/news_model.dart";
 
 class LatestNewsPage extends StatefulWidget {
@@ -67,9 +68,18 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     );
   }
 
+  List<String> displayingNewsType = [
+    "So'ngi yangiliklar",
+    "Asosiy yangiliklar",
+    "Eng ko'p o'qilgan",
+  ];
+
+  String selectedTitle = "";
+
   @override
   Widget build(BuildContext context) {
     int lengthOfNews = news.length;
+    selectedTitle = displayingNewsType[0];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -87,6 +97,12 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               );
             },
           ),
+          title: Text(
+            selectedTitle,
+          ),
+          actions: const <Widget>[
+            Icon(CupertinoIcons.search),
+          ],
         ),
         body: Column(
           children: [
