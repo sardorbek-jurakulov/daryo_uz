@@ -106,9 +106,9 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           actions: <Widget>[
             Flexible(
               child: Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 10,
-                  right: 25,
+                  right: 15,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,7 +131,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     Text(
                       selectedTitle,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -141,43 +141,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                   ],
                 ),
-              ),
-            ),
-          ],
-        ),
-        body: Column(
-          children: [
-            Expanded(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Row(
-                    children: [
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.all(16.0),
-                          primary: Colors.blue,
-                          textStyle: const TextStyle(fontSize: 20),
-                        ),
-                        onPressed: () {},
-                        child: Text("So'ngi yangiliklar"),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: lengthOfNews,
-                itemBuilder: (BuildContext context, int index) {
-                  return Column(
-                    children: [
-                      createNews(),
-                      Divider(),
-                    ],
-                  );
-                },
               ),
             ),
           ],
@@ -208,74 +171,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                               // fontWeight: FontWeight.w500,
                             ),
                           ),
-                          // Container(
-                          //   height: 35,
-                          //   decoration: BoxDecoration(
-                          //     border: Border.all(
-                          //       color: Colors.white,
-                          //     ),
-                          //     borderRadius: const BorderRadius.all(
-                          //       Radius.circular(10.0),
-                          //     ),
-                          //   ),
-                          //   child: ClipRRect(
-                          //     borderRadius: BorderRadius.circular(10.0),
-                          //     child: Row(
-                          //       children: [
-                          //         TextButton(
-                          //           style: TextButton.styleFrom(
-                          //             backgroundColor: isLatinChecked
-                          //                 ? Colors.white
-                          //                 : Color(0xff1180b6),
-                          //             shape: const BeveledRectangleBorder(
-                          //               borderRadius: BorderRadius.all(
-                          //                 Radius.circular(0),
-                          //               ),
-                          //             ),
-                          //           ),
-                          //           onPressed: () {
-                          //             setState(() {
-                          //               isLatinChecked = !isLatinChecked;
-                          //             });
-                          //           },
-                          //           child: Text(
-                          //             "Lotincha",
-                          //             style: TextStyle(
-                          //               color: isLatinChecked
-                          //                   ? Color(0xff1180b6)
-                          //                   : Colors.white,
-                          //             ),
-                          //           ),
-                          //         ),
-                          //         TextButton(
-                          //           style: TextButton.styleFrom(
-                          //             backgroundColor: !isLatinChecked
-                          //                 ? Colors.white
-                          //                 : Color(0xff1180b6),
-                          //             shape: const BeveledRectangleBorder(
-                          //               borderRadius: BorderRadius.all(
-                          //                 Radius.circular(0),
-                          //               ),
-                          //             ),
-                          //           ),
-                          //           onPressed: () {
-                          //             setState(() {
-                          //               isLatinChecked = !isLatinChecked;
-                          //             });
-                          //           },
-                          //           child: Text(
-                          //             "Кириллча",
-                          //             style: TextStyle(
-                          //               color: !isLatinChecked
-                          //                   ? Color(0xff1180b6)
-                          //                   : Colors.white,
-                          //             ),
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
                           Row(
                             children: [
                               TextButton(
@@ -684,6 +579,43 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               ),
             ],
           ),
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    children: [
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        child: Text("So'ngi yangiliklar"),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: lengthOfNews,
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    children: [
+                      createNews(),
+                      Divider(),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
