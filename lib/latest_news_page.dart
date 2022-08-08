@@ -186,9 +186,11 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           child: ListView(
             children: [
               SizedBox(
-                height: 195,
+                height: 188,
                 child: DrawerHeader(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+                  margin: EdgeInsets.zero,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
                   decoration: const BoxDecoration(
                     color: Color(0xff1180b6),
                   ),
@@ -445,67 +447,94 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                   ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.zero,
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text("Qo'llanma ekranni ko'rsatish"),
-                      tileColor: Color(0xfffffbc9),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  ListTile(
+                    title: Text(
+                      "Qo'llanma ekranni ko'rsatish",
+                      style: TextStyle(
+                        color: Color(0xff000000),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                    ListTile(
-                      title: Text("So'ngi yangiliklar"),
+                    tileColor: Color(0xfffffbc9),
+                    // horizontalTitleGap: 0,
+                    // minLeadingWidth: 0,
+                    // minVerticalPadding: 0,
+                    // contentPadding: EdgeInsets.zero,
+                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    // dense: true,
+                  ),
+                  ListTile(
+                    title: Text(
+                      "So'ngi yangiliklar",
+                      style: TextStyle(
+                        color: Color(0xff1e96f0),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                    ListTile(
-                      title: Text("Mahalliy"),
-                    ),
-                    ListTile(
-                      title: Text("Dunyo"),
-                    ),
-                    ListTile(
-                      title: Text("Texnologiyalar"),
-                    ),
-                    ListTile(
-                      title: Text("Madaniyat"),
-                    ),
-                    ListTile(
-                      title: Text("Tanlangan xabarlar"),
-                    ),
-                    ListTile(
-                      title: Text("Avto"),
-                    ),
-                    ListTile(
-                      title: Text("Sport"),
-                    ),
-                    ListTile(
-                      title: Text("Foto"),
-                    ),
-                    ListTile(
-                      title: Text("Lifestyle"),
-                    ),
-                    ListTile(
-                      title: Text("Kolumnistlar"),
-                    ),
-                    ListTile(
-                      title: Text("Afisha"),
-                    ),
-                    ListTile(
-                      title: Text("Valyutalar kursi"),
-                    ),
-                    ListTile(
-                      title: Text("Ob-havo"),
-                    ),
-                    ListTile(
-                      title: Text("Foydalanish shartlari"),
-                    ),
-                    ListTile(
-                      title: Text("\"Daryo\" haqida"),
-                    ),
-                    ListTile(
-                      title: Text("Sozlamalar"),
-                    ),
-                  ],
-                ),
+                    tileColor: Color(0xffffffff),
+                    // horizontalTitleGap: 0,
+                    // minLeadingWidth: 0,
+                    // minVerticalPadding: 0,
+                    // contentPadding: EdgeInsets.zero,
+                    // visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    // dense: true,
+                  ),
+                  ListTile(
+                    title: Text("Mahalliy"),
+                  ),
+                  ListTile(
+                    title: Text("Dunyo"),
+                  ),
+                  ListTile(
+                    title: Text("Texnologiyalar"),
+                  ),
+                  ListTile(
+                    title: Text("Madaniyat"),
+                  ),
+                  ListTile(
+                    title: Text("Tanlangan xabarlar"),
+                  ),
+                  ListTile(
+                    title: Text("Avto"),
+                  ),
+                  ListTile(
+                    title: Text("Sport"),
+                  ),
+                  ListTile(
+                    title: Text("Foto"),
+                  ),
+                  ListTile(
+                    title: Text("Lifestyle"),
+                  ),
+                  ListTile(
+                    title: Text("Kolumnistlar"),
+                  ),
+                  ListTile(
+                    title: Text("Afisha"),
+                  ),
+                  ListTile(
+                    title: Text("Valyutalar kursi"),
+                  ),
+                  ListTile(
+                    title: Text("Ob-havo"),
+                  ),
+                  ListTile(
+                    title: Text("Foydalanish shartlari"),
+                  ),
+                  ListTile(
+                    title: Text("\"Daryo\" haqida"),
+                  ),
+                  ListTile(
+                    title: Text("Sozlamalar"),
+                    tileColor: Color(0xffccaacc),
+                  ),
+                ],
               ),
             ],
           ),
