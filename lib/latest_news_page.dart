@@ -86,23 +86,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          // leading: Builder(
-          //   builder: (BuildContext context) {
-          //     return IconButton(
-          //       icon: const Icon(
-          //         Icons.menu,
-          //         // Changing Drawer Icon Size
-          //       ),
-          //       onPressed: () {
-          //         Scaffold.of(context).openDrawer();
-          //       },
-          //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-          //     );
-          //   },
-          // ),
-          // title: Text(
-          //   selectedTitle,
-          // ),
           actions: <Widget>[
             Flexible(
               child: Padding(
@@ -596,7 +579,25 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         ),
                         onPressed: () {},
                         child: Text("So'ngi yangiliklar"),
-                      )
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        child: Text("Asosiy yangiliklar"),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.blue,
+                          textStyle: const TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        child: Text("Eng ko'p o'qilgan"),
+                      ),
                     ],
                   ),
                 ],
