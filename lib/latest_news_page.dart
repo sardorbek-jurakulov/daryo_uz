@@ -388,7 +388,59 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                           color: Color(0xffffffff),
                         ),
                       ),
-                      Row(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Icon(
+                                CupertinoIcons.money_dollar_circle,
+                                color: Color(0xffffffff),
+                                size: 25,
+                              ),
+                              Text(
+                                "10919.89",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(
+                                CupertinoIcons.money_dollar_circle,
+                                color: Color(0xffffffff),
+                                size: 25,
+                              ),
+                              Text(
+                                "11125.18",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(
+                                CupertinoIcons.money_rubl_circle,
+                                color: Color(0xffffffff),
+                                size: 25,
+                              ),
+                              Text(
+                                "181.47",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
