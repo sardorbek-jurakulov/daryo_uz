@@ -85,6 +85,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          shadowColor: Colors.transparent,
           automaticallyImplyLeading: false,
           actions: <Widget>[
             Flexible(
