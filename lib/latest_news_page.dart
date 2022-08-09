@@ -565,8 +565,12 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
         ),
         body: Column(
           children: [
-            Expanded(
+            SizedBox(
+              height: 56,
               child: ListView(
+                padding: const EdgeInsets.only(
+                  left: 100,
+                ),
                 scrollDirection: Axis.horizontal,
                 children: [
                   Row(
@@ -575,7 +579,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
                           primary: Colors.blue,
-                          textStyle: const TextStyle(fontSize: 20),
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         onPressed: () {},
                         child: Text("So'ngi yangiliklar"),
@@ -584,7 +591,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
                           primary: Colors.blue,
-                          textStyle: const TextStyle(fontSize: 20),
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         onPressed: () {},
                         child: Text("Asosiy yangiliklar"),
@@ -593,7 +603,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
                           primary: Colors.blue,
-                          textStyle: const TextStyle(fontSize: 20),
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         onPressed: () {},
                         child: Text("Eng ko'p o'qilgan"),
