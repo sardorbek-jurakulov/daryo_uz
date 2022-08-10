@@ -77,6 +77,9 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
   String selectedTitle = "";
 
   bool isLatinChecked = true;
+  bool isLatestNewsSelected = true;
+  bool isMainNewsSelected = false;
+  bool isMostReadSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -451,7 +454,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Foto",
                       style: TextStyle(
@@ -462,7 +465,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Lifestyle",
                       style: TextStyle(
@@ -473,7 +476,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Kolumnistlar",
                       style: TextStyle(
@@ -484,7 +487,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Afisha",
                       style: TextStyle(
@@ -495,7 +498,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffececec),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Valyutalar kursi",
                       style: TextStyle(
@@ -506,7 +509,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffececec),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Ob-havo",
                       style: TextStyle(
@@ -517,7 +520,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffececec),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Foydalanish shartlari",
                       style: TextStyle(
@@ -528,7 +531,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffececec),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "\"Daryo\" haqida",
                       style: TextStyle(
@@ -539,7 +542,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffececec),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Sozlamalar",
                       style: TextStyle(
@@ -577,47 +580,101 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                 children: [
                   Row(
                     children: [
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.all(16.0),
-                          primary: Colors.blue,
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.blue.withOpacity(0.3),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              width: 3,
+                              color: (isLatestNewsSelected)
+                                  ? Color(0xff1180b6).withOpacity(1.0)
+                                  : Color(0xff1180b6).withOpacity(0.0),
                             ),
                           ),
                         ),
-                        onPressed: () {},
-                        child: Text("So'ngi yangiliklar"),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.blue,
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            // shape: RoundedRectangleBorder(
+                            // side: BorderSide(
+                            //   width: 3,
+                            //   color: Colors.blue.withOpacity(1.0),
+                            // ),
+                            // ),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              isLatestNewsSelected = true;
+                              isMainNewsSelected = false;
+                              isMostReadSelected = false;
+                            });
+                          },
+                          child: const Text("So'ngi yangiliklar"),
+                        ),
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.all(16.0),
-                          primary: Colors.blue,
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              width: 3,
+                              color: (isMainNewsSelected)
+                                  ? Color(0xff1180b6).withOpacity(1.0)
+                                  : Color(0xff1180b6).withOpacity(0.0),
+                            ),
                           ),
                         ),
-                        onPressed: () {},
-                        child: Text("Asosiy yangiliklar"),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.blue,
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              isLatestNewsSelected = false;
+                              isMainNewsSelected = true;
+                              isMostReadSelected = false;
+                            });
+                          },
+                          child: Text("Asosiy yangiliklar"),
+                        ),
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.all(16.0),
-                          primary: Colors.blue,
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              width: 3,
+                              color: (isMostReadSelected)
+                                  ? Color(0xff1180b6).withOpacity(1.0)
+                                  : Color(0xff1180b6).withOpacity(0.0),
+                            ),
                           ),
                         ),
-                        onPressed: () {},
-                        child: Text("Eng ko'p o'qilgan"),
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.blue,
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              isLatestNewsSelected = false;
+                              isMainNewsSelected = false;
+                              isMostReadSelected = true;
+                            });
+                          },
+                          child: Text("Eng ko'p o'qilgan"),
+                        ),
                       ),
                     ],
                   ),
