@@ -261,13 +261,10 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                           ),
                         ],
                       ),
-                      const Opacity(
-                        opacity: 0.7,
-                        child: Divider(
-                          height: 30,
-                          thickness: 1,
-                          color: Color(0xffffffff),
-                        ),
+                      Divider(
+                        height: 30,
+                        thickness: 1,
+                        color: const Color(0xffffffff).withOpacity(0.7),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -344,8 +341,8 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  ListTile(
+                children: [
+                  const ListTile(
                     title: Text(
                       "Qo'llanma ekranni ko'rsatish",
                       style: TextStyle(
@@ -356,7 +353,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xfffffbc9),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "So'ngi yangiliklar",
                       style: TextStyle(
@@ -367,7 +364,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Mahalliy",
                       style: TextStyle(
@@ -378,7 +375,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Dunyo",
                       style: TextStyle(
@@ -389,7 +386,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Texnologiyalar",
                       style: TextStyle(
@@ -400,7 +397,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Madaniyat",
                       style: TextStyle(
@@ -411,15 +408,12 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  Opacity(
-                    opacity: 0.2,
-                    child: Divider(
-                      height: 0,
-                      thickness: 1,
-                      color: Color(0xff000000),
-                    ),
+                  Divider(
+                    height: 0,
+                    thickness: 0.7,
+                    color: const Color(0xff000000).withOpacity(0.3),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Tanlangan xabarlar",
                       style: TextStyle(
@@ -430,15 +424,12 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  Opacity(
-                    opacity: 0.2,
-                    child: Divider(
-                      height: 0,
-                      thickness: 1,
-                      color: Color(0xff000000),
-                    ),
+                  Divider(
+                    height: 0,
+                    thickness: 0.7,
+                    color: const Color(0xff000000).withOpacity(0.5),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Avto",
                       style: TextStyle(
@@ -449,7 +440,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                     ),
                     tileColor: Color(0xffffffff),
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "Sport",
                       style: TextStyle(
@@ -568,6 +559,16 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           children: [
             SizedBox(
               height: 56,
+              // decoration: BoxDecoration(
+              //   boxShadow: [
+              //     BoxShadow(
+              //       color: Colors.grey.withOpacity(0.5),
+              //       spreadRadius: 0,
+              //       blurRadius: 1,
+              //       offset: const Offset(0, 55), // changes position of shadow
+              //     ),
+              //   ],
+              // ),
               child: ListView(
                 padding: const EdgeInsets.only(
                   left: 100,
@@ -583,6 +584,12 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                           textStyle: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 2,
+                              color: Colors.blue.withOpacity(0.3),
+                            ),
                           ),
                         ),
                         onPressed: () {},
