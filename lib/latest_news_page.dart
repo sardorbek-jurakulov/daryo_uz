@@ -60,7 +60,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 10.0),
+          padding: const EdgeInsets.only(bottom: 7.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -73,13 +73,27 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               ),
               Row(
                 children: [
-                  Text("${createdDate}|"),
-                  const Icon(
-                    Icons.remove_red_eye_outlined,
-                    color: Color(0xff1196c4),
+                  Text(
+                    "${createdDate} | ",
+                    style: const TextStyle(
+                      color: Color(0xffa2a2a2),
+                      fontSize: 14,
+                    ),
                   ),
-                  Text(numberOfViews.toString(),
-                      style: TextStyle(color: Color(0xff1196c4))),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 4.0),
+                    child: Icon(
+                      Icons.remove_red_eye_outlined,
+                      color: Color(0xff1196c4),
+                      size: 22,
+                    ),
+                  ),
+                  Text(
+                    numberOfViews.toString(),
+                    style: const TextStyle(
+                      color: Color(0xff1196c4),
+                    ),
+                  ),
                 ],
               )
             ],
