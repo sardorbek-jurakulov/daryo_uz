@@ -587,7 +587,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Colors.grey.withOpacity(0.8),
                     spreadRadius: 0,
                     blurRadius: 1,
                     offset: const Offset(0, 55), // changes position of shadow
