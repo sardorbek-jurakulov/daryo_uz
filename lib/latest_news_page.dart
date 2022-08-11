@@ -59,20 +59,31 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       String createdDate, int numberOfViews) {
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              category,
-              style: TextStyle(),
-            ),
-            Row(
-              children: [
-                Text("${createdDate}|"),
-                Text(numberOfViews.toString()),
-              ],
-            )
-          ],
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                category,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xff1196c4),
+                ),
+              ),
+              Row(
+                children: [
+                  Text("${createdDate}|"),
+                  const Icon(
+                    Icons.remove_red_eye_outlined,
+                    color: Color(0xff1196c4),
+                  ),
+                  Text(numberOfViews.toString(),
+                      style: TextStyle(color: Color(0xff1196c4))),
+                ],
+              )
+            ],
+          ),
         ),
         Row(
           children: [
@@ -621,12 +632,6 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             ),
-                            // shape: RoundedRectangleBorder(
-                            // side: BorderSide(
-                            //   width: 3,
-                            //   color: Colors.blue.withOpacity(1.0),
-                            // ),
-                            // ),
                           ),
                           onPressed: () {
                             setState(() {
@@ -705,7 +710,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(18.0),
                 decoration: const BoxDecoration(
                   color: Color(0xfff3f3f3),
                 ),
@@ -723,7 +728,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         Divider(
                           height: 20,
                           thickness: 1,
-                          color: Color(0xff000000).withOpacity(0.1),
+                          color: const Color(0xff000000).withOpacity(0.15),
                         ),
                       ],
                     );
