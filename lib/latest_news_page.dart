@@ -55,14 +55,36 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     ),
   ];
 
-  Widget createNews() {
+  Widget createNews(String category, String imagePath, String description,
+      String createdDate, int numberOfViews) {
     return Column(
       children: [
         Row(
-          children: [],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              category,
+              style: TextStyle(),
+            ),
+            Row(
+              children: [
+                Text("${createdDate}|"),
+                Text(numberOfViews.toString()),
+              ],
+            )
+          ],
         ),
         Row(
-          children: [],
+          children: [
+            Expanded(
+              flex: 1,
+              child: Image.asset("assets/images/bogcha_mahalla.jpeg"),
+            ),
+            Expanded(
+              flex: 2,
+              child: Text(description),
+            ),
+          ],
         ),
       ],
     );
@@ -560,18 +582,18 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
         ),
         body: Column(
           children: [
-            SizedBox(
+            Container(
               height: 56,
-              // decoration: BoxDecoration(
-              //   boxShadow: [
-              //     BoxShadow(
-              //       color: Colors.grey.withOpacity(0.5),
-              //       spreadRadius: 0,
-              //       blurRadius: 1,
-              //       offset: const Offset(0, 55), // changes position of shadow
-              //     ),
-              //   ],
-              // ),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 0,
+                    blurRadius: 1,
+                    offset: const Offset(0, 55), // changes position of shadow
+                  ),
+                ],
+              ),
               child: ListView(
                 padding: const EdgeInsets.only(
                   left: 100,
@@ -682,16 +704,31 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: lengthOfNews,
-                itemBuilder: (BuildContext context, int index) {
-                  return Column(
-                    children: [
-                      createNews(),
-                      Divider(),
-                    ],
-                  );
-                },
+              child: Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: const BoxDecoration(
+                  color: Color(0xfff3f3f3),
+                ),
+                child: ListView.builder(
+                  itemCount: lengthOfNews,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Column(
+                      children: [
+                        createNews(
+                            news[index].category,
+                            news[index].imagePath,
+                            news[index].description,
+                            news[index].createdDate,
+                            news[index].numberOfViews),
+                        Divider(
+                          height: 20,
+                          thickness: 1,
+                          color: Color(0xff000000).withOpacity(0.1),
+                        ),
+                      ],
+                    );
+                  },
+                ),
               ),
             ),
           ],
