@@ -13,42 +13,42 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
   List<News> news = [
     News(
       "Dunyo",
-      "",
+      "assets/images/canada_military_dunyo.jpeg",
       "Kanada mudofaa vaziri mamlakatda 33 mingdan ortiq ukrainalik askarni tayyorlaganini aytdi",
       "17:45",
       646,
     ),
     News(
       "Mahalliy",
-      "",
+      "assets/images/daraxtlar_mahalliy.jpeg",
       "Chilonzorda katta daraxtlar ildiziga shikast yetkazgan tashkilotga 261 mln so'm jarima belgilandi",
       "17:45",
       1502,
     ),
     News(
       "Madaniyat, Mahalliy",
-      "",
+      "assets/images/namangan_teatr_madaniyat_marifat.jpeg",
       "Namangan viloyat teatrida yangi mavsum \"Ibrat\" tarixiy drammasi premyerasi bilan boshlandi",
       "17:16",
       2991,
     ),
     News(
       "Sport",
-      "",
+      "assets/images/conor_macgregor_sport.jpeg",
       "Konor Makregor MMA'dagi faoliyatini yakunlashiga ishora qildi",
       "17:45",
       646,
     ),
     News(
       "Maslahatlar",
-      "",
+      "assets/images/supermarketda_kamroq_pul_sarflash_maslahatlar.jpeg",
       "Foydali maslahat: supermarketda kamroq pul sarflashning 7 usuli",
       "17:45",
       646,
     ),
     News(
       "Shou-biznes",
-      "",
+      "assets/images/yulduzlar_shou_biznes.jpeg",
       "Kir yuvish mashinasidan ot fermasigacha: Gollivud yulduzlari ilk gonorarini nimaga sarflagan?",
       "17:45",
       646,
@@ -74,7 +74,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
               Row(
                 children: [
                   Text(
-                    "${createdDate} | ",
+                    "$createdDate | ",
                     style: const TextStyle(
                       color: Color(0xffa2a2a2),
                       fontSize: 14,
@@ -100,14 +100,26 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               flex: 1,
-              child: Image.asset("assets/images/bogcha_mahalla.jpeg"),
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.fill,
+              ),
             ),
             Expanded(
               flex: 2,
-              child: Text(description),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Text(
+                  description,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
