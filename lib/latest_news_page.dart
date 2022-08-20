@@ -243,7 +243,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Text(
-                    description,
+                    title,
                     style: const TextStyle(
                       fontWeight: FontWeight.w500,
                     ),

@@ -15,7 +15,13 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(args["category"] ?? "Batafsil"),
+          title: Text(
+            args["category"] ?? "Batafsil",
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 19,
+            ),
+          ),
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -34,7 +40,10 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                   ),
                 ],
               ),
-              Text(args["description"] ?? "Sarlavha"),
+              Text(args["title"] ?? "Sarlavha"),
+              Text(args["tldr"] ?? "Sarlavha"),
+              Image.asset(args["imagePath"] ?? "Rasm"),
+              Text(args["description"] ?? "Batafsil")
             ],
           ),
         ),
