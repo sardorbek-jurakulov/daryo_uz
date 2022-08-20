@@ -59,13 +59,17 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       String createdDate, int numberOfViews) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, "/news/details", arguments: {
-          "category": category,
-          "imagePath": imagePath,
-          "description": description,
-          "createdDate": createdDate,
-          "numberOfViews": numberOfViews,
-        });
+        Navigator.pushNamed(
+          context,
+          "/news/details",
+          arguments: <String, String>{
+            "category": category,
+            "imagePath": imagePath,
+            "description": description,
+            "createdDate": createdDate,
+            "numberOfViews": numberOfViews.toString(),
+          },
+        );
       },
       child: Column(
         children: [

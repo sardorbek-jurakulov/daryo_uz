@@ -10,12 +10,26 @@ class NewsDetailsPage extends StatefulWidget {
 class _NewsDetailsPageState extends State<NewsDetailsPage> {
   @override
   Widget build(BuildContext context) {
+    final args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text(args["category"] ?? "Batafsil"),
+          centerTitle: true,
+        ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Column(children: [Text("Navigation ishladi")]),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Row(),
+                  Row(),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
