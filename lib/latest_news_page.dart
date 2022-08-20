@@ -60,7 +60,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 7.0),
+          padding: const EdgeInsets.only(bottom: 5.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
