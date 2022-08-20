@@ -24,10 +24,17 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
             children: [
               Row(
                 children: [
-                  Row(),
-                  Row(),
+                  Text("${args["createdTime"]} | ${args["createdDate"]}" ??
+                      "yangilik vaqti"),
+                  Row(
+                    children: [
+                      const Icon(Icons.remove_red_eye_outlined),
+                      Text(args["numberOfViews"] ?? "ko'rishlar soni"),
+                    ],
+                  ),
                 ],
-              )
+              ),
+              Text(args["description"] ?? "Sarlavha"),
             ],
           ),
         ),
