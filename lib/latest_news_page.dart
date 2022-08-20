@@ -57,73 +57,76 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
 
   Widget createNews(String category, String imagePath, String description,
       String createdDate, int numberOfViews) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 5.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return InkWell(
+      onTap: () {},
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 5.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  category,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xff1196c4),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "$createdDate | ",
+                      style: const TextStyle(
+                        color: Color(0xffa2a2a2),
+                        fontSize: 14,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 4.0),
+                      child: Icon(
+                        Icons.remove_red_eye_outlined,
+                        color: Color(0xff1196c4),
+                        size: 22,
+                      ),
+                    ),
+                    Text(
+                      numberOfViews.toString(),
+                      style: const TextStyle(
+                        color: Color(0xff1196c4),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                category,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xff1196c4),
+              Expanded(
+                flex: 1,
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.fill,
                 ),
               ),
-              Row(
-                children: [
-                  Text(
-                    "$createdDate | ",
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text(
+                    description,
                     style: const TextStyle(
-                      color: Color(0xffa2a2a2),
-                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(right: 4.0),
-                    child: Icon(
-                      Icons.remove_red_eye_outlined,
-                      color: Color(0xff1196c4),
-                      size: 22,
-                    ),
-                  ),
-                  Text(
-                    numberOfViews.toString(),
-                    style: const TextStyle(
-                      color: Color(0xff1196c4),
-                    ),
-                  ),
-                ],
-              )
+                ),
+              ),
             ],
           ),
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              flex: 1,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.fill,
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Text(
-                  description,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ],
+        ],
+      ),
     );
   }
 
