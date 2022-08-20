@@ -58,7 +58,15 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
   Widget createNews(String category, String imagePath, String description,
       String createdDate, int numberOfViews) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, "/news/details", arguments: {
+          "category": category,
+          "imagePath": imagePath,
+          "description": description,
+          "createdDate": createdDate,
+          "numberOfViews": numberOfViews,
+        });
+      },
       child: Column(
         children: [
           Padding(
