@@ -14,6 +14,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Dunyo",
       "assets/images/canada_military_dunyo.jpeg",
+      "Global Look Press",
       "Kanada mudofaa vaziri mamlakatda 33 mingdan ortiq ukrainalik askarni tayyorlaganini aytdi",
       """
       “Gazeta.ru” nashrining xabar berishicha, Kanada mudofaa vaziri Anita Anandning aytishicha, 2015-yildan beri Kanadaning UNIFIER dasturi doirasida 33 mingdan ortiq ukrainalik harbiy xizmatchilar o‘qitilgan. Bu haqda Ukraina qo‘shinlari bosh shtabi ijtimoiy tarmoqlarda ma’lum qilgan.
@@ -32,6 +33,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Mahalliy",
       "assets/images/daraxtlar_mahalliy.jpeg",
+      "Chilonzor tumani hokimligi",
       "Chilonzorda katta daraxtlar ildiziga shikast yetkazgan tashkilotga 261 mln so'm jarima belgilandi",
       "Toshkent shahri Chilonzor tumanida katta daraxtlarning ildiziga shikast yetkazilgani haqida xabar berilgandi. Ma’lum bo‘lishicha, quruvchi tashkilotga nisbatan jarima belgilangan.",
       """
@@ -54,6 +56,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Madaniyat, Mahalliy",
       "assets/images/namangan_teatr_madaniyat_marifat.jpeg",
+      "“Daryo” / Jahongir Akramov",
       "Namangan viloyat teatrida yangi mavsum \"Ibrat\" tarixiy drammasi premyerasi bilan boshlandi",
       "Namangan viloyat musiqali drama teatrida 91-mavsumning ochilish marosimi bo‘lib o‘tdi. Bu haqda “Daryo” muxbiri Azizbek Abduvaliyev xabar bermoqda.",
       """
@@ -77,6 +80,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Sport",
       "assets/images/conor_macgregor_sport.jpeg",
+      "Getty Images",
       "Konor Makregor MMA'dagi faoliyatini yakunlashiga ishora qildi",
       "Ikki vazn toifasida UFC sobiq chempioni Konor Makgregor faoliyatini yakunlashiga ishora qildi.",
       """
@@ -93,6 +97,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Maslahatlar",
       "assets/images/supermarketda_kamroq_pul_sarflash_maslahatlar.jpeg",
+      "Getty Images",
       "Foydali maslahat: supermarketda kamroq pul sarflashning 7 usuli",
       "Har bir kishi pulni havoga sovurmaslik va keraksiz narsalarni xarid qilmasligi uchun marketing hiylalari haqida bilishi kerak. Quyida sizga supermarket va do‘konlarda pulingizni tejashning oddiy qoidalarini o‘rgatamiz.",
       """
@@ -126,6 +131,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
     News(
       "Shou-biznes",
       "assets/images/yulduzlar_shou_biznes.jpeg",
+      "Getty Images",
       "Kir yuvish mashinasidan ot fermasigacha: Gollivud yulduzlari ilk gonorarini nimaga sarflagan?",
       "Mashhurlar har doim ham hashamatli uylar va yaxtalarning egalari bo‘lmagan. Deyarli har biri o‘z karyerasini kam gonorar bilan boshlagan — bu faqat oziq-ovqat uchun yetarli edi yoki ba’zida butunlay tekinga suratga tushishgan. Quyida Gollivud yulduzlari ilk gonorariga nimalar xarid qilgani haqida bilib olasiz.",
       """
@@ -163,6 +169,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
   Widget createNews(
       String category,
       String imagePath,
+      String imageSource,
       String title,
       String tldr,
       String description,
@@ -177,6 +184,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
           arguments: <String, String>{
             "category": category,
             "imagePath": imagePath,
+            "imageSource": imageSource,
             "title": title,
             "tldr": tldr,
             "description": description,
@@ -878,6 +886,7 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
                         createNews(
                             news[index].category,
                             news[index].imagePath,
+                            news[index].imageSource,
                             news[index].title,
                             news[index].tldr,
                             news[index].description,

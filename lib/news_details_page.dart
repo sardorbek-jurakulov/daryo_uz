@@ -41,20 +41,64 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("${args["createdTime"]} | ${args["createdDate"]}" ??
-                          "yangilik vaqti"),
+                      Text(
+                        "${args["createdTime"]} | ${args["createdDate"]}" ??
+                            "yangilik vaqti",
+                        style: TextStyle(
+                          color: Color(0xffababab),
+                        ),
+                      ),
                       Row(
                         children: [
-                          const Icon(Icons.remove_red_eye_outlined),
-                          Text(args["numberOfViews"] ?? "ko'rishlar soni"),
+                          const Icon(
+                            Icons.remove_red_eye_outlined,
+                            color: Color(0xff337b94),
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Text(
+                            args["numberOfViews"] ?? "ko'rishlar soni",
+                            style: TextStyle(
+                              color: Color(0xff337b94),
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
-                  Text(args["title"] ?? "Sarlavha"),
-                  Text(args["tldr"] ?? "Sarlavha"),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    args["title"] ?? "Sarlavha",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    args["tldr"] ?? "Sarlavha",
+                    textAlign: TextAlign.justify,
+                  ),
                   Image.asset(args["imagePath"] ?? "Rasm"),
-                  Text(args["description"] ?? "Batafsil")
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Foto: ${args["imageSource"] ?? "rasm manbasi"}',
+                    textAlign: TextAlign.start,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    args["description"] ?? "Batafsil",
+                    textAlign: TextAlign.justify,
+                  )
                 ],
               ),
             ),
