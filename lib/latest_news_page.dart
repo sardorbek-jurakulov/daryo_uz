@@ -176,92 +176,73 @@ class _LatestNewsPageState extends State<LatestNewsPage> {
       String createdTime,
       String createdDate,
       int numberOfViews) {
-    return InkWell(
-      onTap: () {
-        Navigator.pushNamed(
-          context,
-          "/news/details",
-          arguments: <String, String>{
-            "category": category,
-            "imagePath": imagePath,
-            "imageSource": imageSource,
-            "title": title,
-            "tldr": tldr,
-            "description": description,
-            "createdTime": createdTime,
-            "createdDate": createdDate,
-            "numberOfViews": numberOfViews.toString(),
-          },
-        );
-      },
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  category,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xff1196c4),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      "$createdDate | ",
-                      style: const TextStyle(
-                        color: Color(0xffa2a2a2),
-                        fontSize: 14,
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 4.0),
-                      child: Icon(
-                        Icons.remove_red_eye_outlined,
-                        color: Color(0xff1196c4),
-                        size: 22,
-                      ),
-                    ),
-                    Text(
-                      numberOfViews.toString(),
-                      style: const TextStyle(
-                        color: Color(0xff1196c4),
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 5.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(
-                flex: 1,
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.fill,
+              Text(
+                category,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xff1196c4),
                 ),
               ),
-              Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Text(
-                    title,
+              Row(
+                children: [
+                  Text(
+                    "$createdDate | ",
                     style: const TextStyle(
-                      fontWeight: FontWeight.w500,
+                      color: Color(0xffa2a2a2),
+                      fontSize: 14,
                     ),
                   ),
-                ),
-              ),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 4.0),
+                    child: Icon(
+                      Icons.remove_red_eye_outlined,
+                      color: Color(0xff1196c4),
+                      size: 22,
+                    ),
+                  ),
+                  Text(
+                    numberOfViews.toString(),
+                    style: const TextStyle(
+                      color: Color(0xff1196c4),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
-        ],
-      ),
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 1,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.fill,
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
