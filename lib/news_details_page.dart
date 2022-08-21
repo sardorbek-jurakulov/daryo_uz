@@ -109,13 +109,18 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                       children: [
                         Image.asset(
                           "assets/images/telegram.png",
+                          width: 35,
+                          height: 35,
+                        ),
+                        const SizedBox(
+                          width: 10,
                         ),
                         const Expanded(
                           child: Text(
                             "Telegramingizda hali ham \"Daryo\" ning rasmiy kanali yo'qmi? Join!",
                             style: TextStyle(
                               color: Color(0xffffffff),
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                         ),
