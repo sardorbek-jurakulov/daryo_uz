@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:daryo_uz_clone/news_creator.dart";
 
 class NewsDetailsPage extends StatefulWidget {
   const NewsDetailsPage({Key? key}) : super(key: key);
@@ -169,6 +170,7 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Boshqa yangiliklar"),
+                    NewsCreator(),
                   ],
                 ),
               ),
