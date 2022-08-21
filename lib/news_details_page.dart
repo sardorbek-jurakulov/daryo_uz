@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:daryo_uz_clone/news_creator.dart";
+// import "package:daryo_uz_clone/news_creator.dart";
 
 class NewsDetailsPage extends StatefulWidget {
   const NewsDetailsPage({Key? key}) : super(key: key);
@@ -168,9 +168,8 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("Boshqa yangiliklar"),
-                    NewsCreator(),
                   ],
                 ),
               ),
