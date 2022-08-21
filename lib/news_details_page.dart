@@ -44,7 +44,7 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                       Text(
                         "${args["createdTime"]} | ${args["createdDate"]}" ??
                             "yangilik vaqti",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xffababab),
                         ),
                       ),
@@ -54,12 +54,12 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                             Icons.remove_red_eye_outlined,
                             color: Color(0xff337b94),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 2,
                           ),
                           Text(
                             args["numberOfViews"] ?? "ko'rishlar soni",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xff337b94),
                             ),
                           ),
@@ -67,17 +67,17 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Text(
                     args["title"] ?? "Sarlavha",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -85,20 +85,43 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
                     textAlign: TextAlign.justify,
                   ),
                   Image.asset(args["imagePath"] ?? "Rasm"),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Text(
                     'Foto: ${args["imageSource"] ?? "rasm manbasi"}',
                     textAlign: TextAlign.start,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
                     args["description"] ?? "Batafsil",
                     textAlign: TextAlign.justify,
-                  )
+                  ),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                    decoration: const BoxDecoration(
+                      color: Color(0xff2ca5df),
+                    ),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/images/telegram.png",
+                        ),
+                        const Expanded(
+                          child: Text(
+                            "Telegramingizda hali ham \"Daryo\" ning rasmiy kanali yo'qmi? Join!",
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
